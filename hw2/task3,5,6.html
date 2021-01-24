@@ -1,0 +1,61 @@
+<!-- Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
+
+если a и b положительные, вывести их разность;
+если а и b отрицательные, вывести их произведение;
+если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function summ(a, b) {
+            return a + b;
+        }
+        function minus(a, b) {
+            return a - b;
+        }
+        function multiplication(a, b) {
+            return a * b;
+        }
+        function division(a, b) {
+            return a / b;
+        }
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case summ:
+                    return summ(arg1, arg2);
+                    break;
+                case minus:
+                    return minus(arg1, arg2);
+                    break;
+                case multiplication:
+                    return multiplication(arg1, arg2);
+                    break;
+                case division:
+                    return division(arg1, arg2);
+                    break;
+            }
+        }
+        function operation(a, b) {
+            if (a >= 0 && b >= 0) {
+                return mathOperation(a, b, minus);
+            } else if (a < 0 && b < 0) {
+                return mathOperation(a, b, multiplication);
+            }
+            return mathOperation(a, b, summ);
+        }
+
+        var a = Math.round(prompt('введите целое число'));
+        var b = Math.round(prompt('введите целое число'));
+        alert(operation(a, b));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
