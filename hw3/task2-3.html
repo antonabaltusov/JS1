@@ -1,0 +1,27 @@
+<script>
+    function countBasketPrice(basket) {
+        var countPrice = 0;
+        for (var item of basket) {
+            countPrice += (item.price * item.sum)
+        }
+        return countPrice;
+    }
+    var basket1 = [
+        {
+            title: "Товар 1",
+            price: 100,
+            sum: 5
+        },
+        {
+            title: "Товар 2",
+            price: 200,
+            sum: 2
+        },
+        {
+            title: "Товар 3",
+            price: 300,
+            sum: 1
+        }
+    ];
+    alert(countBasketPrice(basket1));
+</script>
