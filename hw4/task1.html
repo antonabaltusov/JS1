@@ -1,0 +1,46 @@
+<script>
+    var n = prompt("введите число от 0 до 999");
+    var massiv = [];
+    var obj = {};
+    object(n);
+
+    function object(n) {
+        if (isAnswer(n)) {
+            massiv = n.split('');
+            if (massiv.length == 3) {
+                obj = {
+                    ed: massiv[2],
+                    des: massiv[1],
+                    sotni: massiv[0]
+                }
+                console.log(obj);
+            } else if (massiv.length == 2) {
+                obj = {
+                    ed: massiv[1],
+                    des: massiv[0],
+                }
+                console.log(obj);
+            } else if (massiv.length == 1) {
+                obj = {
+                    ed: massiv[0],
+                }
+                console.log(obj);
+            }
+        };
+        return obj
+
+    };
+    function isAnswer(event) {
+        if (isNaN(event) || !isFinite(event)) {
+            console.log('Вы ввели недопустимый символ');
+            return false;
+        }
+        else if (event < 1 || event > 999) {
+            console.log('Ваше число выходит из допустимого диапозона');
+            return false;
+        }
+        return true;
+    }
+
+
+</script>
