@@ -1,0 +1,28 @@
+* {
+    margin: 0; 
+    padding: 0;
+    }
+.board{
+    border: 1px solid black;
+    
+    
+}
+.white{
+    background-color: LightGrey;
+}
+.black{
+    background-color: grey;
+}
+table{
+    border-collapse: collapse;
+    background: silver;
+}
+td{
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+.up, .right{
+    transform: rotate(180deg);
+    position: relative;
+}
