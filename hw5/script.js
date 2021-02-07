@@ -38,10 +38,10 @@ for (i = 0; i < 10; i++) {
         }
         if (i > 0 && i < 9) {
             if (j == 0) {
-                td.innerText = i
+                td.innerText = 9 - i
             }
             if (j == 9) {
-                td.innerText = i;
+                td.innerText = 9 - i;
                 td.classList.add("right")
             }
         }
