@@ -1,0 +1,23 @@
+<script>
+    var n = 1;
+    var i;
+    var numbers = [];
+    n: while (n <= 100) {
+        if (n == 1 || n == 2) {
+            numbers.push(n++);
+            continue;
+        }
+        i = 2;
+        i: while (i < n) {
+            if (n % i) {
+                i++;
+                continue;
+            } else {
+                n++;
+                continue n;
+            }
+        }
+        numbers.push(n++);
+    }
+    console.log(numbers)
+</script>
