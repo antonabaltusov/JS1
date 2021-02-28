@@ -60,7 +60,7 @@ for (i = 0; i < 10; i++) {
 }
 // headers[i].classList.add("myClass");
 console.log(table);
-document.getElementsByTagName("div")[0].append(table);
+document.getElementsBy("div")[0].append(table);
 
 document.querySelector("h1").innerHTML = "&#9816;";
 //    var item = document.createTextNode("Обычный текст");
